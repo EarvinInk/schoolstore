@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+Register page
+{% endblock %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">LogIn</h5>
+                <p class="card-text">
+                <form action="{% url 'credentials:register' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">username</label>
+                        <input type="text" class="form-control" id="username" placeholder="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Password"
+                               name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="CPassword">Password</label>
+                        <input type="password" class="form-control" id="CPassword" placeholder="Cnofirm Password"
+                               name="c_password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                </p>
+            </div>
+            <div class="card-footer text-muted">
+                {% for msg in messages%}
+                {{msg}}
+                {% endfor%}
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}

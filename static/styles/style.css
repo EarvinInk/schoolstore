@@ -1,0 +1,25 @@
+body{
+background-color:#F0EBE3;
+}
+
+.navbar{
+background-color:#E4DCCF;
+}
+
+.card{
+
+background-color:#7D9D9C;
+}
+
+.container{
+background: url("../images/bg1.png");
+background-repeat: repeat;
+padding:25%;
+}
+.order.container{
+padding:10px;
+}
+.card button{
+background-color:#576F72;
+border-color: #7D9D9C;
+}
