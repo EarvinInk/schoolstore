@@ -12,7 +12,7 @@ class OrderForm(forms.ModelForm):
             'department': forms.Select(attrs={'class': 'form-control'}),
             'course': forms.Select(attrs={'class': 'form-control'}),
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'date_of_birth': forms.DateInput(format='%d/%m/%Y',attrs={'class': 'form-control'}),
+            'date_of_birth': forms.DateInput(format='%d/%m/%Y',attrs={'class': 'form-control','type': 'date'}),
             'age': forms.NumberInput(attrs={'class': 'form-control'}),
             'gender': forms.Select(attrs={'class': 'form-control'}),
             'phone_number': forms.NumberInput(attrs={'class': 'form-control'}),

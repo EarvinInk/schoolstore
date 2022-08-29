@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block metadescription %}
-home page
+Sucess form submition
 {% endblock %}
 
 {% block title %}
-EduStore
+sucess
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<div class=" p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Place Order</h1>
-        <p class="col-md-8 fs-4">Place your order or send for a enquiry</p>
-        <a href="{% url 'schoolstore:order' %}"><button class="btn btn-primary btn-lg" type="button">Place order</button></a>
-      </div>
+    <div class=" p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Sucess</h1>
+            <p class="col-md-8 fs-4">Your order/inqury has been sucessfully sent. A representative will contact you soon. </p>
+            <p>-Thankyou</p>
+            <a href="{% url 'schoolstore:home' %}">
+                <button class="btn btn-primary btn-lg" type="button">Return to home</button>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}

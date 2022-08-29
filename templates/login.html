@@ -28,16 +28,18 @@ LogIn
                 </div>
 
                 <button type="submit" class="btn btn-primary">Login</button>
-                <a href="{% url 'credentials:register' %}">
-                    <button type="button" class="btn btn-primary">Register</button>
-                </a>
+
 
             </form>
             </p>
         </div>
-        <div class="card-footer text-muted">
+        <div class="card-footer ">
+             New user? Register here-
+                <a href="{% url 'credentials:register' %}">
+                    Register
+                </a>
             {% for msg in messages%}
-            {{msg}}
+            <p> - {{msg}}</p>
             {% endfor%}
         </div>
     </div>

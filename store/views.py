@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import OrderForm
 from .models import Courses
 from django.views.generic.edit import CreateView
@@ -9,14 +9,18 @@ def home(request):
     return render(request, 'home.html')
 
 
+def sucess(request):
+    return render(request, 'sucess.html')
+
+
 class place_order(CreateView):
     form_class = OrderForm
     template_name = 'order.html'
-    success_url = '/'
+
 
     def form_valid(self, form):
         form.save()
-        return super(place_order, self).form_valid(form)
+        return redirect('/sucess')
 
 
 def get_courses(request):

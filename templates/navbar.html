@@ -7,11 +7,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+
+            {% if user.is_authenticated %}
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'schoolstore:home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
-
-            {% if user.is_authenticated %}
             <li class="nav-item nav-link">
                 Heloo {{user.username}}
             </li>
